@@ -52,8 +52,8 @@ if ! which -s mysql; then
   fancy_echo "Installing MySQL, another good open source relational database ..."
     brew install mysql
     fancy_echo "Launch MySQL with system start..."
-      ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-      launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+      ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+      launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 fi
 
 fancy_echo "Installing Redis, a good key-value database ..."
