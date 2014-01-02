@@ -25,7 +25,7 @@ fancy_echo() {
 
 if ! which -s brew; then
   fancy_echo "Installing Homebrew, a good OS X package manager ..."
-    ruby <(curl -fsS https://raw.github.com/mxcl/homebrew/go/install)
+    ruby <(curl -fsS https://raw.github.com/Homebrew/homebrew/go/install)
     brew update
 
   if ! grep -qs "recommended by brew doctor" ~/.bashrc; then
@@ -78,7 +78,7 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brew install imagemagick
 
 fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt --HEAD
+  brew install qt
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
@@ -138,4 +138,6 @@ fancy_echo "Installing critical Ruby gems for Rails development ..."
   gem install bundler pg rails unicorn --no-ri --no-doc
 
 ### end common-components/ruby-environment-with-rvm
+
+### end 
 
